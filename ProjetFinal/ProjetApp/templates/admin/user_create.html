@@ -1,0 +1,47 @@
+
+
+{% block content %}
+<div class="registration-form">
+    <h2>Ajouter un Utilisateur</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Ajouter Utilisateur</button>
+    </form>
+</div>
+
+<style>
+    .registration-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .registration-form h2 {
+        text-align: center;
+    }
+
+    .registration-form form {
+        margin-top: 20px;
+    }
+
+    .registration-form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .registration-form button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+{% endblock %}
